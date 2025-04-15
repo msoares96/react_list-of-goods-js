@@ -31,7 +31,7 @@ export const App = () => {
   function sortAlphabetically() {
     if (!isSortedA) {
       setGoods(
-        [...goodsFromServer].sort((a, b) => {
+        [...goods].sort((a, b) => {
           if (a < b) {
             return -1;
           }
@@ -54,7 +54,7 @@ export const App = () => {
 
   function sortByLength() {
     if (!isSortedL) {
-      setGoods([...goodsFromServer].sort((a, b) => a.length - b.length));
+      setGoods([...goods].sort((a, b) => a.length - b.length));
       if (isReversed) {
         setGoods([...goods].reverse());
       }
